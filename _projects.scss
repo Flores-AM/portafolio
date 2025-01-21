@@ -1,0 +1,289 @@
+@use "_variables.scss" as v;
+@use "_mixins.scss" as m;
+
+.projects {
+  @include m.desktop {
+    display: flex;
+  }
+  width: 100%;
+  display: none;
+  justify-content: center;
+  gap: 1rem;
+  margin: 4rem auto;
+  overflow: hidden;
+
+  &.projects2 {
+    @include m.desktop {
+      display: none;
+    }
+    display: flex;
+    flex-direction: column;
+
+    .cardCel {
+      padding-top: 1rem;
+    }
+
+    #marker4 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto !important;
+      width: 90% !important;
+      background-color: #222;
+      border-radius: 2rem;
+      z-index: -1;
+      transition: ease-in 0.5s;
+    }
+
+    .cursor1,
+    .cursor2 {
+      display: none;
+    }
+  }
+
+  &:hover {
+    cursor: grabbing;
+  }
+
+  .caja-carta {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .card {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #22222225;
+      // background-color: #222;
+      height: 20rem;
+      border-radius: 2rem;
+      margin: 0 auto;
+
+      .barra-card {
+        margin-bottom: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 3rem 1rem 3rem;
+        border-bottom: 1px dashed #b6b6b69c;
+        pointer-events: none !important;
+
+        a {
+          color: v.$blanco;
+          pointer-events: none;
+          font-weight: 200;
+          font-size: 2rem;
+          font-family: "Shadows Into Light", cursive;
+        }
+
+        svg {
+          filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+        }
+      }
+
+      .caja-datos {
+        display: flex;
+        width: 100%;
+        pointer-events: none;
+        .datos {
+          width: 100%;
+          p {
+            width: 100%;
+            margin: 0;
+            padding: 0 3rem 2rem 3rem;
+            text-align: center;
+            font-weight: 200;
+            font-size: 1.2rem;
+            color: v.$blanco;
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      #visitar {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .barra-card {
+        a {
+          animation: foco 5s linear infinite;
+        }
+
+        svg {
+          animation: focoSvg 5s linear infinite;
+        }
+      }
+    }
+
+    #visitar {
+      opacity: 0;
+      position: relative;
+      width: fit-content;
+      padding: 1rem 5rem;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+      font-weight: 200;
+      font-size: 2.5rem;
+      cursor: pointer;
+      margin: 0 auto;
+      overflow: hidden;
+      background-color: transparent;
+      border-radius: 0.5rem;
+      transform: translateY(2rem);
+      color: #222;
+      transition: 0.3s;
+      font-family: "Shadows Into Light", cursive;
+
+      span {
+        position: absolute;
+        display: grid;
+        place-content: center;
+        top: 0;
+        left: 0;
+        width: 4.8rem;
+        height: 4.8rem;
+        border-radius: 50%;
+        background-color: #222;
+        color: #fff;
+        letter-spacing: -4px;
+        transition: 0.5s !important;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: v.$amarillo;
+        transition: 0.5s;
+      }
+
+      &:hover span {
+        left: 70%;
+        transform: rotate(180deg);
+        color: #ff5757;
+        font-weight: normal;
+        // text-shadow: 0 0 1rem #ff5757, 0 0 2rem #ff5757, 0 0 4rem #ff5757,
+        //   0 0 8rem #ff5757, 0 0 16rem #ff5757;
+        animation: foco 5s linear infinite;
+      }
+
+      &:hover::before {
+        left: -15%;
+        background: linear-gradient(to right, v.$amarillo, 80%, #5f3316a1);
+      }
+    }
+  }
+}
+
+#marker3 {
+  position: absolute;
+  top: 9rem;
+  // width: 90%;
+  // left: 0;
+  // right: 0;
+  // margin: 0 auto;
+  height: 20rem;
+  background-color: #222222;
+  transition: ease 1s;
+  z-index: -1;
+  border-radius: 2rem;
+}
+
+#card1:hover {
+  .cursor1 {
+    opacity: 1;
+  }
+}
+
+#card2:hover {
+  .cursor2 {
+    opacity: 1;
+  }
+}
+.cursor1,
+.cursor2 {
+  opacity: 0;
+  position: fixed;
+  display: grid;
+  place-content: center;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: #fff;
+  color: #222 !important;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 999 !important;
+  transition: 0.2s;
+}
+
+@keyframes foco {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: v.$foco;
+    text-shadow: none;
+  }
+  18.1%,
+  20.1%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: v.$blanco;
+    text-shadow: 0 0 1rem v.$blanco, 0 0 2rem v.$blanco, 0 0 4rem v.$blanco,
+      0 0 8rem v.$blanco, 0 0 16rem v.$blanco;
+  }
+}
+
+@keyframes focoSvg {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: v.$foco;
+    filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0));
+  }
+  18.1%,
+  20.1%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: v.$blanco;
+    filter: drop-shadow(0 0 3px v.$amarillo) drop-shadow(0 0 2rem v.$amarillo);
+  }
+}

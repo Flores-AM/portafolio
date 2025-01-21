@@ -1,0 +1,87 @@
+@use "_variables.scss" as v;
+@use "_mixins.scss" as m;
+
+.alerta {
+  position: absolute;
+  top: 2rem;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: fit-content;
+  height: fit-content;
+  padding: 2rem 3rem;
+  background-color: v.$negro;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  font-family: "Shadows Into Light", cursive;
+  text-align: center;
+  font-size: 2rem;
+  color: v.$blanco;
+  letter-spacing: 2px;
+  opacity: 0 !important;
+  -webkit-box-shadow: 0px 15px 29px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 15px 29px -10px rgba(0,0,0,0.75);
+  box-shadow: 0px 15px 29px -10px rgba(0,0,0,0.75);
+  animation: foco 5s linear infinite;
+  z-index: 50;
+
+  &.visible {
+    opacity: 1 !important;
+  }
+
+  @include m.tablet {
+    font-size: 3rem;
+  }
+
+  .cerrar {
+    position: absolute;
+    bottom: -4rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    -webkit-box-shadow: 0px 0px 58px -3px rgb(30, 30, 30);
+    -moz-box-shadow: 0px 0px 58px -3px rgba(30, 30, 30, 0.63);
+    box-shadow: 0px 0px 58px -3px rgba(30,30,30,1);
+    transition: all 0.5s linear;
+
+    @include m.tablet {
+      top: 1rem;
+      right: -5rem;
+      left: 100%;
+      bottom: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: #a83333;
+    }
+  }
+}
+
+// @keyframes alerta {
+//   0% {
+//     transform: scale(0);
+//   }
+
+// }
+
+.swal2-popup {
+
+  @include m.desktopXL {
+    width: 25%;
+    height: 50%;
+  }
+}
+
+.swal2-styled {
+  background-color: rgba(49, 35, 29, 0.9058823529);;
+}

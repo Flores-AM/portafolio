@@ -1,0 +1,682 @@
+@use "_variables.scss" as v;
+@use "_mixins.scss" as m;
+
+.nav {
+  width: 100%;
+  display: flex;
+  padding-top: 3rem;
+
+  p {
+    // @include m.telefono {
+    // }
+    @include m.tablet {
+      font-size: 2.5rem;
+      margin: 2rem;
+
+      &:first-child {
+        margin-left: 10rem;
+      }
+    }
+    padding: 1rem;
+    margin: 1rem auto;
+    width: auto;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 1.8rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &.actual {
+      background-color: #222;
+      color: #fff;
+      transition: 0.3s !important;
+      &::before {
+        width: 100%;
+        background-color: #fff;
+      }
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: relative;
+      top: 50%;
+      left: 0;
+      height: 0.1rem;
+      width: 0;
+      background-color: #333;
+      transition: 0.5s;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+
+  #marker {
+    @include m.tablet {
+      top: 5rem;
+      height: 5rem;
+    }
+    position: absolute;
+    top: 4.12rem;
+    left: 0;
+    height: 4.12rem;
+    background-color: transparent;
+    transition: 0.5s;
+    z-index: -1;
+    border-radius: 0.4rem;
+  }
+
+  &:hover #marker {
+    background-color: #3015036e;
+  }
+
+  #marker2 {
+    @include m.tablet {
+      top: 5rem;
+      height: 5rem;
+    }
+    position: absolute;
+    left: 0;
+    top: 4.12rem;
+    height: 4.12rem;
+    background-color: #444;
+    transition: 0.5s;
+    z-index: -1;
+    border-radius: 0.4rem;
+  }
+}
+
+section {
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .fondo {
+    @include m.tablet {
+      font-size: calc(20vw + 1rem);
+      background-size: 30vw auto, 35vw auto, 20vw auto;
+    }
+    background-color: #31231de7;
+    text-align: center;
+    margin: 0 0 2rem 0;
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0, #000),
+      color-stop(0.5, #000),
+      color-stop(1, transparent)
+    );
+    mask-image: none;
+    transition: background-position 1s, background-color 1s;
+    text-align: center;
+    width: 100%;
+    font-size: calc(20vw + 8rem);
+    font-weight: 700;
+    line-height: 1;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/tw-o.png"),
+      url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/tw6-o.png"),
+      url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/tw5-o.png");
+    background-size: 60vw auto, 65vw auto, 45vw auto;
+    background-repeat: repeat-x;
+    background-position: 0px 15%, 200px 25%, -50px 2vw;
+    animation: fondo 2s ease-in-out;
+
+    &.segundo {
+      background-color: #222 !important;
+      background-position: -120px 15%, 230px 20%, -100px 3vw;
+    }
+    &.tercero {
+      background-color: #1f0f04e0;
+      background-position: -240px 15%, 260px 25%, -150px 1vw;
+    }
+
+    &.f-ds {
+      @include m.tablet {
+        display: block;
+      }
+      display: none;
+    }
+
+    &.f-cel {
+      @include m.tablet {
+        display: none;
+      }
+      display: block;
+    }
+  }
+
+  @keyframes fondo {
+    0% {
+      transform: scale(0);
+    }
+    80% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .pasos {
+    @include m.tablet {
+      width: 90%;
+    }
+    display: none;
+    width: 100%;
+    margin: 0 auto !important;
+
+    &.mostrar {
+      display: block;
+      // .html,
+      // .css,
+      // .me,
+      // .js,
+      // .php,
+      // .caja-glitch,
+      // .projects {
+      //   position: relative !important;
+      //   opacity: 1;
+      // }
+
+      // .me {
+      //   transform: scale(1);
+      // }
+
+      // .caja-glitch,
+      // .projects {
+      //   transition: 0.8s;
+      // }
+
+      // .projects {
+      //   transform: scale(1);
+      //   pointer-events: visible;
+      //   transition-delay: 0.3s;
+      // }
+
+      // .html,
+      // .css,
+      // .js,
+      // .php {
+      //   transform: scale(1);
+      // }
+
+      // .caja-glitch {
+      //   transform: translate(0);
+      // }
+    }
+  }
+
+  // #paso-1 {
+  //    position: relative;
+  // }
+}
+
+//! vemos
+
+.glitch {
+  @include m.telefono {
+    font-size: 2rem !important;
+  }
+  @include m.tablet {
+    font-size: 3rem !important;
+  }
+  position: relative;
+  color: black;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  font-weight: 200;
+  text-transform: uppercase;
+  width: fit-content;
+  padding: 0 0.2rem;
+  margin: 0 auto !important;
+
+  &:nth-child(2) {
+    font-size: 1.3rem;
+  }
+}
+@keyframes noise-anim {
+  @for $i from 0 through 20 {
+    #{percentage($i*(1 / 20))} {
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+    }
+  }
+}
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: black;
+  background: v.$amarillo;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+  @for $i from 0 through 20 {
+    #{percentage($i*(1/20))} {
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+    }
+  }
+}
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: black;
+  background: v.$amarillo;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+.me {
+  @include m.tablet {
+    padding: 5rem 10rem;
+    gap: 0;
+  }
+  width: 100%;
+  height: fit-content;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2.5rem 2rem;
+  gap: 5rem;
+  // transition: 0.5s;
+}
+
+.svg {
+  position: relative;
+  background-color: transparent;
+
+  &:hover {
+    animation: wobble-top 1s linear;
+  }
+
+  &.activo {
+    .bubbles {
+      display: block !important;
+    }
+    #btn {
+      background-color: #222;
+      transform: scale(1.2);
+    }
+    svg {
+      stroke: #fff;
+    }
+
+    .porcentaje {
+      background-color: #222 !important;
+    }
+  }
+
+  #svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  #btn {
+    @include m.tablet {
+      width: 8rem;
+      height: 8rem;
+    }
+    width: 6rem;
+    height: 6rem;
+    position: relative;
+    background-color: v.$amarillo;
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    display: grid;
+    place-content: center;
+    filter: url("#btn");
+    cursor: pointer;
+    transition: 0.1s;
+
+    .porcentaje {
+      @include m.tablet {
+        width: 4rem;
+        height: 4rem;
+        font-size: 1.2rem;
+      }
+      position: absolute;
+      display: grid;
+      place-content: center;
+      bottom: -1.5rem;
+      right: -3.5rem;
+      border-radius: 50%;
+      width: 3.5rem;
+      height: 3.5rem;
+      background-color: transparent;
+      color: #fff;
+      font-size: 1rem;
+      animation: moving 5s linear infinite alternate;
+
+      @keyframes moving {
+        0% {
+          transform: translate(0) translateY(0) scale(0.65);
+        }
+        25% {
+          transform: translateY(-1.2rem) scale(0.5);
+        }
+        50% {
+          transform: translate(-0.5rem) translateY(-1.2rem) scale(0.5);
+        }
+        75% {
+          transform: translate(0) translateY(-0.5rem) scale(0.55);
+        }
+        100% {
+          transform: translate(0) translateY(0) scale(0.6);
+        }
+      }
+    }
+
+    .bubbles {
+      display: none;
+      position: absolute;
+      top: -3.5rem;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      outline: none;
+      border: none;
+      transition: 0.3s;
+
+      .bubble {
+        @include m.tablet {
+          width: 2rem;
+          height: 2rem;
+        }
+        position: absolute;
+        top: 4rem !important;
+        left: -0.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: #222;
+        display: block;
+        border-radius: 100%;
+        animation: bubble1 2.1s infinite !important;
+        z-index: -10;
+        transition: 0.3s;
+
+        &:nth-child(2) {
+          @include m.tablet {
+            width: 2rem;
+            height: 2rem;
+          }
+          left: 4rem;
+          width: 1.5rem;
+          height: 1.5rem;
+          animation: bubble2 1.5s infinite !important;
+          animation-delay: 0.1s;
+        }
+        &:nth-child(3) {
+          @include m.tablet {
+            width: 2.5rem;
+            height: 2.5rem;
+          }
+          left: 3rem;
+          width: 2rem;
+          height: 2rem;
+          animation: bubble3 1.3s infinite !important;
+          animation-delay: 0.2s;
+        }
+        &:nth-child(4) {
+          @include m.tablet {
+            width: 3rem;
+            height: 3rem;
+          }
+          left: 0.4rem;
+          width: 2.5rem;
+          height: 2.5rem;
+          animation: bubble 1.8s infinite !important;
+          animation-delay: 0.2s;
+        }
+        &:nth-child(5) {
+          @include m.tablet {
+            width: 2.5rem;
+            height: 2.5rem;
+          }
+          left: 1.4rem;
+          width: 2rem;
+          height: 2rem;
+          animation: bubble 2.8s infinite;
+          animation-delay: 0.2s;
+        }
+        &:nth-child(6) {
+          @include m.tablet {
+            width: 2.8rem;
+            height: 2.8rem;
+          }
+          left: 1.4rem;
+          width: 2.3rem;
+          height: 2.3rem;
+          animation: bubble 1.4s infinite;
+          animation-delay: 0.2s;
+        }
+        &:nth-child(7) {
+          @include m.tablet {
+            width: 2.2rem;
+            height: 2.2rem;
+          }
+          left: 1.4rem;
+          width: 1.7rem;
+          height: 1.7rem;
+          animation: bubble 2.2s infinite;
+          animation-delay: 0.2s;
+        }
+        &:nth-child(8) {
+          @include m.tablet {
+            width: 3rem;
+            height: 3rem;
+          }
+          left: 1.4rem;
+          width: 2.5rem;
+          height: 2.5rem;
+          animation: bubble 1.8s infinite;
+          animation-delay: 0.2s;
+        }
+        &:nth-child(9) {
+          @include m.tablet {
+            width: 3.2rem;
+            height: 3.2rem;
+          }
+          left: 1.4rem;
+          width: 2.7rem;
+          height: 2.7rem;
+          animation: bubble 3.1s infinite;
+          animation-delay: 0.2s;
+        }
+        &:nth-child(10) {
+          @include m.tablet {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+          left: 1.4rem;
+          width: 1rem;
+          height: 1rem;
+          animation: bubble 3.2s infinite;
+          animation-delay: 0.2s;
+        }
+      }
+    }
+
+    svg {
+      @include m.tablet {
+        width: 6rem;
+        height: 6rem;
+      }
+      width: 4.5rem;
+      height: 4.5rem;
+      transition: 0.3s;
+    }
+  }
+}
+
+@keyframes bubble1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, -5rem);
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+@keyframes bubble2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, -6rem);
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+@keyframes bubble3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, -8rem);
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+@keyframes bubble4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, -4rem);
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+@keyframes bubble5 {
+  0% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, -10rem);
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+@keyframes bubble6 {
+  0% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, -5.5rem);
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+@keyframes bubble7 {
+  0% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, -9rem);
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+@keyframes bubble8 {
+  0% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, -8.5rem);
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+@keyframes bubble9 {
+  0% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, -6.5rem);
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+@keyframes bubble10 {
+  0% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, -5.1rem);
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes wobble-top {
+  16.65% {
+    transform: skew(-12deg);
+  }
+
+  33.3% {
+    transform: skew(10deg);
+  }
+
+  49.95% {
+    transform: skew(-6deg);
+  }
+
+  66.6% {
+    transform: skew(4deg);
+  }
+
+  83.25% {
+    transform: skew(-2deg);
+  }
+
+  100% {
+    transform: skew(0);
+  }
+}
