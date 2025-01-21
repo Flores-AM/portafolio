@@ -358,7 +358,7 @@ document.getElementById('form')
     .then(() => {
       
       Swal.fire({
-        title: "Drag me!",
+        title: "Sending Succesfully!",
         icon: "success",
         draggable: true
       });
