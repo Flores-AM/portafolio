@@ -37,7 +37,10 @@
     }
 
     .cursor1,
-    .cursor2 {
+    .cursor2,
+    .cursor3,
+    .cursor5 
+    {
       display: none;
     }
   }
@@ -52,7 +55,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    .card {
+    .card, .card2 {
       width: 100%;
       display: flex;
       justify-content: center;
@@ -190,7 +193,7 @@
   }
 }
 
-#marker3 {
+#marker3, #marker5 {
   position: absolute;
   top: 9rem;
   // width: 90%;
@@ -202,6 +205,10 @@
   transition: ease 1s;
   z-index: -1;
   border-radius: 2rem;
+}
+  
+#marker5 {
+  top: 40rem;
 }
 
 #card1:hover {
@@ -215,8 +222,21 @@
     opacity: 1;
   }
 }
+
+#card3:hover {
+  .cursor3 {
+    opacity: 1;
+  }
+}
+
+#card5:hover {
+  .cursor5 {
+    opacity: 1;
+  }
+}
+
 .cursor1,
-.cursor2 {
+.cursor2, .cursor3, .cursor5 {
   opacity: 0;
   position: fixed;
   display: grid;

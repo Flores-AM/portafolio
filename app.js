@@ -184,6 +184,22 @@ item4.forEach((link4) => {
   });
 });
 
+//! marker nav 5
+
+var marker5 = document.querySelector("#marker5");
+var item5 = document.querySelectorAll(".card2");
+
+function indicator5(e) {
+  marker5.style.left = e.offsetLeft + "px";
+  marker5.style.width = e.offsetWidth + "px";
+}
+
+item5.forEach((link5) => {
+  link5.addEventListener("mousemove", (e) => {
+    indicator5(e.target);
+  });
+});
+
 //! idiomas
 
 const idHtml = document.querySelector("#html");
@@ -243,6 +259,22 @@ const card2 = document.querySelector("#card2");
 card2.addEventListener("mousemove", (e) => {
   cursor2.style.left = e.clientX + "px";
   cursor2.style.top = e.clientY + "px";
+});
+
+const cursor3 = document.querySelector(".cursor3");
+const card3 = document.querySelector("#card3");
+
+card3.addEventListener("mousemove", (e) => {
+  cursor3.style.left = e.clientX + "px";
+  cursor3.style.top = e.clientY + "px";
+});
+
+const cursor5 = document.querySelector(".cursor5");
+const card5 = document.querySelector("#card5");
+
+card5.addEventListener("mousemove", (e) => {
+  cursor5.style.left = e.clientX + "px";
+  cursor5.style.top = e.clientY + "px";
 });
 
 //! formulario

@@ -568,67 +568,67 @@ section .pasos.mostrar {
 
 @keyframes noise-anim {
   0% {
-    clip: rect(72px, 9999px, 41px, 0);
+    clip: rect(51px, 9999px, 23px, 0);
   }
   5% {
-    clip: rect(53px, 9999px, 82px, 0);
+    clip: rect(62px, 9999px, 92px, 0);
   }
   10% {
-    clip: rect(64px, 9999px, 43px, 0);
+    clip: rect(31px, 9999px, 54px, 0);
   }
   15% {
-    clip: rect(52px, 9999px, 77px, 0);
+    clip: rect(78px, 9999px, 82px, 0);
   }
   20% {
-    clip: rect(28px, 9999px, 51px, 0);
+    clip: rect(54px, 9999px, 37px, 0);
   }
   25% {
-    clip: rect(85px, 9999px, 39px, 0);
+    clip: rect(17px, 9999px, 26px, 0);
   }
   30% {
-    clip: rect(63px, 9999px, 98px, 0);
+    clip: rect(48px, 9999px, 81px, 0);
   }
   35% {
-    clip: rect(28px, 9999px, 55px, 0);
+    clip: rect(29px, 9999px, 18px, 0);
   }
   40% {
-    clip: rect(28px, 9999px, 4px, 0);
+    clip: rect(78px, 9999px, 74px, 0);
   }
   45% {
-    clip: rect(33px, 9999px, 41px, 0);
+    clip: rect(47px, 9999px, 16px, 0);
   }
   50% {
-    clip: rect(46px, 9999px, 12px, 0);
+    clip: rect(1px, 9999px, 95px, 0);
   }
   55% {
-    clip: rect(75px, 9999px, 72px, 0);
+    clip: rect(44px, 9999px, 36px, 0);
   }
   60% {
-    clip: rect(55px, 9999px, 93px, 0);
+    clip: rect(76px, 9999px, 22px, 0);
   }
   65% {
-    clip: rect(17px, 9999px, 57px, 0);
+    clip: rect(83px, 9999px, 16px, 0);
   }
   70% {
-    clip: rect(53px, 9999px, 53px, 0);
+    clip: rect(89px, 9999px, 54px, 0);
   }
   75% {
-    clip: rect(70px, 9999px, 26px, 0);
+    clip: rect(92px, 9999px, 97px, 0);
   }
   80% {
-    clip: rect(52px, 9999px, 57px, 0);
+    clip: rect(69px, 9999px, 40px, 0);
   }
   85% {
-    clip: rect(79px, 9999px, 95px, 0);
+    clip: rect(26px, 9999px, 45px, 0);
   }
   90% {
-    clip: rect(52px, 9999px, 64px, 0);
+    clip: rect(68px, 9999px, 32px, 0);
   }
   95% {
-    clip: rect(89px, 9999px, 99px, 0);
+    clip: rect(93px, 9999px, 18px, 0);
   }
   100% {
-    clip: rect(65px, 9999px, 27px, 0);
+    clip: rect(59px, 9999px, 50px, 0);
   }
 }
 .glitch:after {
@@ -646,67 +646,67 @@ section .pasos.mostrar {
 
 @keyframes noise-anim-2 {
   0% {
-    clip: rect(23px, 9999px, 18px, 0);
+    clip: rect(93px, 9999px, 55px, 0);
   }
   5% {
-    clip: rect(67px, 9999px, 76px, 0);
+    clip: rect(2px, 9999px, 74px, 0);
   }
   10% {
-    clip: rect(21px, 9999px, 79px, 0);
+    clip: rect(92px, 9999px, 46px, 0);
   }
   15% {
-    clip: rect(41px, 9999px, 62px, 0);
+    clip: rect(80px, 9999px, 34px, 0);
   }
   20% {
-    clip: rect(40px, 9999px, 93px, 0);
+    clip: rect(70px, 9999px, 57px, 0);
   }
   25% {
-    clip: rect(38px, 9999px, 51px, 0);
+    clip: rect(77px, 9999px, 59px, 0);
   }
   30% {
-    clip: rect(1px, 9999px, 5px, 0);
+    clip: rect(1px, 9999px, 1px, 0);
   }
   35% {
-    clip: rect(29px, 9999px, 26px, 0);
+    clip: rect(7px, 9999px, 32px, 0);
   }
   40% {
-    clip: rect(67px, 9999px, 57px, 0);
+    clip: rect(84px, 9999px, 25px, 0);
   }
   45% {
-    clip: rect(39px, 9999px, 44px, 0);
+    clip: rect(12px, 9999px, 4px, 0);
   }
   50% {
-    clip: rect(20px, 9999px, 14px, 0);
+    clip: rect(15px, 9999px, 80px, 0);
   }
   55% {
-    clip: rect(85px, 9999px, 2px, 0);
+    clip: rect(91px, 9999px, 5px, 0);
   }
   60% {
-    clip: rect(96px, 9999px, 23px, 0);
+    clip: rect(16px, 9999px, 10px, 0);
   }
   65% {
-    clip: rect(54px, 9999px, 63px, 0);
+    clip: rect(23px, 9999px, 96px, 0);
   }
   70% {
-    clip: rect(11px, 9999px, 92px, 0);
+    clip: rect(5px, 9999px, 96px, 0);
   }
   75% {
-    clip: rect(89px, 9999px, 86px, 0);
+    clip: rect(68px, 9999px, 93px, 0);
   }
   80% {
-    clip: rect(52px, 9999px, 12px, 0);
+    clip: rect(2px, 9999px, 42px, 0);
   }
   85% {
-    clip: rect(69px, 9999px, 3px, 0);
+    clip: rect(97px, 9999px, 94px, 0);
   }
   90% {
-    clip: rect(13px, 9999px, 49px, 0);
+    clip: rect(89px, 9999px, 98px, 0);
   }
   95% {
-    clip: rect(43px, 9999px, 79px, 0);
+    clip: rect(80px, 9999px, 33px, 0);
   }
   100% {
-    clip: rect(17px, 9999px, 41px, 0);
+    clip: rect(43px, 9999px, 69px, 0);
   }
 }
 .glitch:before {
@@ -1670,7 +1670,9 @@ section .pasos.mostrar {
   transition: ease-in 0.5s;
 }
 .projects.projects2 .cursor1,
-.projects.projects2 .cursor2 {
+.projects.projects2 .cursor2,
+.projects.projects2 .cursor3,
+.projects.projects2 .cursor5 {
   display: none;
 }
 .projects:hover {
@@ -1683,7 +1685,7 @@ section .pasos.mostrar {
   flex-direction: column;
   gap: 2rem;
 }
-.projects .caja-carta .card {
+.projects .caja-carta .card, .projects .caja-carta .card2 {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1694,7 +1696,7 @@ section .pasos.mostrar {
   border-radius: 2rem;
   margin: 0 auto;
 }
-.projects .caja-carta .card .barra-card {
+.projects .caja-carta .card .barra-card, .projects .caja-carta .card2 .barra-card {
   margin-bottom: 2rem;
   width: 100%;
   display: flex;
@@ -1704,25 +1706,25 @@ section .pasos.mostrar {
   border-bottom: 1px dashed rgba(182, 182, 182, 0.6117647059);
   pointer-events: none !important;
 }
-.projects .caja-carta .card .barra-card a {
+.projects .caja-carta .card .barra-card a, .projects .caja-carta .card2 .barra-card a {
   color: #fff;
   pointer-events: none;
   font-weight: 200;
   font-size: 2rem;
   font-family: "Shadows Into Light", cursive;
 }
-.projects .caja-carta .card .barra-card svg {
+.projects .caja-carta .card .barra-card svg, .projects .caja-carta .card2 .barra-card svg {
   filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.4));
 }
-.projects .caja-carta .card .caja-datos {
+.projects .caja-carta .card .caja-datos, .projects .caja-carta .card2 .caja-datos {
   display: flex;
   width: 100%;
   pointer-events: none;
 }
-.projects .caja-carta .card .caja-datos .datos {
+.projects .caja-carta .card .caja-datos .datos, .projects .caja-carta .card2 .caja-datos .datos {
   width: 100%;
 }
-.projects .caja-carta .card .caja-datos .datos p {
+.projects .caja-carta .card .caja-datos .datos p, .projects .caja-carta .card2 .caja-datos .datos p {
   width: 100%;
   margin: 0;
   padding: 0 3rem 2rem 3rem;
@@ -1800,7 +1802,7 @@ section .pasos.mostrar {
   background: linear-gradient(to right, #eeece0, 80%, rgba(95, 51, 22, 0.631372549));
 }
 
-#marker3 {
+#marker3, #marker5 {
   position: absolute;
   top: 9rem;
   height: 20rem;
@@ -1808,6 +1810,10 @@ section .pasos.mostrar {
   transition: ease 1s;
   z-index: -1;
   border-radius: 2rem;
+}
+
+#marker5 {
+  top: 40rem;
 }
 
 #card1:hover .cursor1 {
@@ -1818,8 +1824,16 @@ section .pasos.mostrar {
   opacity: 1;
 }
 
+#card3:hover .cursor3 {
+  opacity: 1;
+}
+
+#card5:hover .cursor5 {
+  opacity: 1;
+}
+
 .cursor1,
-.cursor2 {
+.cursor2, .cursor3, .cursor5 {
   opacity: 0;
   position: fixed;
   display: grid;
